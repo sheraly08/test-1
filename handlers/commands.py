@@ -57,9 +57,9 @@ async def drinks(message: Message):
 
     for product in products:
         await message.answer(
-            f"Название: {product['name']}\n"
-            f"Цена: {product['price']} сом\n"
-            f"Описание: {product['description']}"
+            f"Название: {product[0]}\n"
+            f"Цена: {product[1]} сом\n"
+            f"Описание: {product[2]}"
         )
     
 @router_commands.message(F.text == 'пока')

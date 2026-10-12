@@ -20,7 +20,7 @@ def add_product_db(name, price, description):
     conn.close()
 
 def get_products_db():
-    conn = sqlite3.connect("database.db")
+    conn = sqlite3.connect(path_db)
     cursor = conn.cursor()
 
     cursor.execute(queries.select_product)
